@@ -1,0 +1,12 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+.text-muted-foreground {
+  @apply text-gray-600 dark:text-gray-300;
+}
