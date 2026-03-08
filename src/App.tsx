@@ -103,6 +103,7 @@ const links = {
     afya: "https://afya-ai-lab.vercel.app/",
     church: "https://ziontemple.vercel.app/",
     roboquest: "https://robo-quest-arena-kahoot.vercel.app/",
+    panafrican_ai_chat_bot: "https://panafricanaisummit.com/",
   },
 };
 
@@ -149,6 +150,11 @@ const skills = {
 
 const awards = [
   {
+    title: "Finalist – McCall MacBain Scholarship for Graduate Studies",
+    org: "McCall MacBain at McGill University",
+    date: "Feb 2026",
+  },
+  {
     title: "Notable Thesis Project 2025 Award",
     org: "Ashesi University",
     date: "Jun 2025",
@@ -159,9 +165,14 @@ const awards = [
     date: "Sep 2024 – Apr 2025",
   },
   {
-    title: "AfyaAI Lab won Best Innovative Business - Winner ($1,000)",
+    title: "AfyaAI Technologies won Best Innovative Business - Winner ($1,000)",
     org: "1st Pan African AI Submit",
     date: "Sep 2025",
+  },
+  {
+    title: "Mastercard Entrepreneurship Fund ($1,000)",
+    org: "Mastercard Foundation",
+    date: "2025",
   },
   {
     title: "Dean’s List",
@@ -193,11 +204,6 @@ const awards = [
     org: "Ashesi University",
     date: "Jan 2022",
   },
-  {
-    title: "Mastercard Entrepreneurship Fund ($1,000)",
-    org: "Mastercard Foundation",
-    date: "2025",
-  },
 ];
 
 const rolesAbout = [
@@ -205,12 +211,12 @@ const rolesAbout = [
   "AI/ML Builder focused on HealthTech and socially impactful systems",
   "Founder, Hopscof Inc. (non‑profit upskilling youth in IT/ML)",
   "Co‑founder & IT Manager, myScholarsHUB",
-  "Founder, AfyaAI Lab (AI health innovations in Ghana)",
+  "Founder, AfyaAI Technologies (AI health innovations in Ghana)",
 ];
 
 const achievementsAbout = [
   "Built 80+ projects across AI, SaaS, mobile, and web",
-  "Shipped hosted products with real users (MyScholarsHub, AfyaAI Lab, Church Platform, RoboQuest)",
+  "Shipped hosted products with real users (MyScholarsHub, AfyaAI Technologies, Church Platform, RoboQuest)",
   "Mentored 100+ youth in web, mobile, and ML (Hopscof)",
 ];
 
@@ -230,7 +236,7 @@ const softwareJourney = {
           live: links.hosted.myscholars,
         },
         {
-          name: "AfyaAI Lab",
+          name: "AfyaAI Technologies",
           desc: "AI health innovations hub (Ghana).",
           live: links.hosted.afya,
         },
@@ -243,6 +249,11 @@ const softwareJourney = {
           name: "RoboQuest Arena",
           desc: "Kahoot‑style game system connected to robots.",
           live: links.hosted.roboquest,
+        },
+        {
+          name: "PAAIS Junior AI Chat Bot",
+          desc: "AI chat assistant for the Pan African AI Summit.",
+          live: links.hosted.panafrican_ai_chat_bot,
         },
       ],
     },
@@ -431,7 +442,7 @@ const currently = {
 };
 
 const personalGoal =
-  "Pursue a PhD in AI for Health & Digital Solutions, focusing on trustworthy AI that scales in low‑resource settings. Long‑term: scale AfyaAI Lab into a continental engine for equitable healthcare technology.";
+  "Pursue a PhD in AI for Health & Digital Solutions, focusing on trustworthy AI that scales in low‑resource settings. Long‑term: scale AfyaAI Technologies into a continental engine for equitable healthcare technology.";
 
 const NAV = [
   { id: "about", label: "About" },
@@ -763,7 +774,7 @@ export default function App() {
               <ExternalLink href={links.hosted.myscholars}>
                 MyScholarsHub
               </ExternalLink>
-              <ExternalLink href={links.hosted.afya}>AfyaAI Lab</ExternalLink>
+              <ExternalLink href={links.hosted.afya}>AfyaAI Technologies</ExternalLink>
             </div>
           </div>
         </Container>
