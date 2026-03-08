@@ -232,7 +232,7 @@ const achievementsAbout = [
 
 const softwareJourney = {
   roles: [
-    "Backend Engineer / Full‑stack Developer (Django, FastAPI, Node.js, React, PostgreSQL)",
+    "Backend Engineer / Full‑stack Developer (Laravel, FastAPI, Node.js, React, PostgreSQL)",
     "AI/ML Developer (classification, CV, predictive modeling)",
     "Mobile Developer (Flutter + Firebase/GCP)",
   ],
