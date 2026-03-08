@@ -210,7 +210,7 @@ const publications = [
   {
     title:
       "A Low-Cost Artificial Intelligence Powered Breath Analyzer for Early Chronic Obstructive Pulmonary Disease Detection in Resource-Limited Environments",
-    venue: "Sage Digital Health Journals",
+    venue: "Sage Digital Health Journal",
     date: "2026",
     link: "https://journals.sagepub.com/doi/epdf/10.1177/20552076261429627",
   },
