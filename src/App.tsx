@@ -121,7 +121,7 @@ const skills = {
     "CSS",
   ],
   frameworks: [
-    "Django",
+    "Laravel",
     "FastAPI",
     "React.js",
     "Node.js",
