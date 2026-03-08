@@ -540,7 +540,7 @@ const PhotoGame: React.FC = () => {
           <div className="absolute bottom-6 left-8 text-white">
             <h3 className="text-lg font-bold leading-tight">Evans Kumi</h3>
             <p className="text-[10px] uppercase tracking-[0.2em] text-cyan-300">
-              Software Engineer
+              Inventor
             </p>
           </div>
 
