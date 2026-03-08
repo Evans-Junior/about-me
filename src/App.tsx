@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 
 const Container: React.FC<React.PropsWithChildren<{ className?: string }>> = ({
   className = "",
@@ -203,6 +203,16 @@ const awards = [
     title: "MasterCard Foundation Scholar Program",
     org: "Ashesi University",
     date: "Jan 2022",
+  },
+];
+
+const publications = [
+  {
+    title:
+      "A Low-Cost Artificial Intelligence Powered Breath Analyzer for Early Chronic Obstructive Pulmonary Disease Detection in Resource-Limited Environments",
+    venue: "Sage Digital Health Journals",
+    date: "2026",
+    link: "https://journals.sagepub.com/doi/epdf/10.1177/20552076261429627",
   },
 ];
 
@@ -450,16 +460,105 @@ const NAV = [
   { id: "leadership", label: "Leadership" },
   { id: "university", label: "Ashesi Journey" },
   { id: "research", label: "Research" },
+  { id: "publications", label: "Publications" },
   { id: "awards", label: "Awards" },
   { id: "currently", label: "Currently" },
   { id: "goal", label: "Personal Goal" },
 ];
 
+const PhotoGame: React.FC = () => {
+  const [score, setScore] = useState(0);
+  const [pos, setPos] = useState({ x: 50, y: 50 });
+  const [isGlitching, setIsGlitching] = useState(false);
+
+  // Moves the target randomly every 1.2 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPos({
+        x: Math.random() * 70 + 15, // Keep within bounds
+        y: Math.random() * 70 + 15,
+      });
+    }, 1200);
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleCatch = () => {
+    setScore((s) => s + 1);
+    setIsGlitching(true);
+    // Instant jump to new position on catch
+    setPos({ x: Math.random() * 70 + 15, y: Math.random() * 70 + 15 });
+    setTimeout(() => setIsGlitching(false), 300);
+  };
+
+  return (
+    <Section className="py-12">
+      <Container className="flex flex-col items-center">
+        {/* Scoreboard */}
+        <div className="mb-6 flex flex-col items-center gap-2">
+          <div className="flex items-center gap-2 rounded-full border bg-zinc-50 px-4 py-1.5 dark:bg-zinc-900">
+            <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+              Catch the Code:
+            </span>
+            <span className="text-sm font-mono font-bold text-blue-600 dark:text-cyan-400">
+              {score}
+            </span>
+          </div>
+          {score >= 10 && (
+            <p className="animate-bounce text-xs font-medium text-teal-500">
+              Master Developer Status! 🚀
+            </p>
+          )}
+        </div>
+
+        {/* Game Container: Strictly Vertical (3:4 Ratio) */}
+        <div className="relative group w-full max-w-4xl aspect-video overflow-hidden rounded-[2.5rem] border-4 border-white shadow-2xl dark:border-zinc-800">
+          {/* Main Photo: object-top ensures your head isn't cut off */}
+          <img
+            src="/me.jpeg"
+            alt="Evans Kumi"
+            className={`h-full w-full object-cover object-top transition-all duration-300 ${
+              isGlitching ? "scale-105 blur-sm invert-[0.1]" : "scale-100"
+            }`}
+          />
+
+          {/* Interactive Target (The "Code Bracket") */}
+          <button
+            onMouseEnter={handleCatch}
+            onClick={handleCatch}
+            className="absolute z-30 flex h-12 w-12 cursor-crosshair items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white shadow-xl transition-all duration-500 ease-out hover:scale-125"
+            style={{
+              left: `${pos.x}%`,
+              top: `${pos.y}%`,
+              transform: "translate(-50%, -50%)",
+            }}
+          >
+            <span className="font-mono text-lg font-bold">{"</>"}</span>
+          </button>
+
+          {/* Visual Polish */}
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60" />
+          <div className="absolute bottom-6 left-8 text-white">
+            <h3 className="text-lg font-bold leading-tight">Evans Kumi</h3>
+            <p className="text-[10px] uppercase tracking-[0.2em] text-cyan-300">
+              Software Engineer
+            </p>
+          </div>
+
+          {/* Static Scanline Overlay for "Tech" feel */}
+          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%),linear-gradient(90deg,rgba(255,0,0,0.03),rgba(0,255,0,0.01),rgba(0,0,255,0.03))] bg-[length:100%_4px,3px_100%]" />
+        </div>
+      </Container>
+    </Section>
+  );
+};
+
+
+
 const Header: React.FC = () => {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur dark:bg-zinc-950/70">
-      <Container className="flex items-center justify-between py-3">
+      <Container className="flex items-center justify-between py-3 max-w-none px-6">
         <a href="#top" className="group inline-flex items-center gap-2">
           <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-blue-600 via-cyan-500 to-teal-400" />
           <div>
@@ -529,6 +628,7 @@ const Header: React.FC = () => {
 };
 
 export default function App() {
+
   const year = useMemo(() => new Date().getFullYear(), []);
   return (
     <div
@@ -595,6 +695,9 @@ export default function App() {
           </div>
         </Container>
       </Section>
+
+      {/* --- Insert this between your two Sections --- */}
+      <PhotoGame />
 
       <Section id="about" title="About Evans Kumi">
         <div className="grid gap-6 md:grid-cols-2">
@@ -731,6 +834,30 @@ export default function App() {
         </div>
       </Section>
 
+      <section id="publications" className="scroll-mt-24 py-12 sm:py-16">
+        <Container>
+          <header className="mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">
+              Publications
+            </h2>
+          </header>
+          <div className="grid gap-4">
+            {publications.map((p) => (
+              <Card key={p.title}>
+                <div className="flex items-center justify-between">
+                  <h4 className="text-sm font-semibold">{p.title}</h4>
+                  <Badge tone="info">{p.venue}</Badge>
+                </div>
+                <p className="mt-1 text-sm text-muted-foreground">{p.date}</p>
+                <div className="mt-3">
+                  <ExternalLink href={p.link}>Read Publication</ExternalLink>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       <Section id="awards" title="Achievements & Awards">
         <div className="grid gap-4">
           {awards.map((a, idx) => (
@@ -774,7 +901,9 @@ export default function App() {
               <ExternalLink href={links.hosted.myscholars}>
                 MyScholarsHub
               </ExternalLink>
-              <ExternalLink href={links.hosted.afya}>AfyaAI Technologies</ExternalLink>
+              <ExternalLink href={links.hosted.afya}>
+                AfyaAI Technologies
+              </ExternalLink>
             </div>
           </div>
         </Container>
