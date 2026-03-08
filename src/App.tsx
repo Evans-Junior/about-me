@@ -896,6 +896,8 @@ export default function App() {
           <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
             <p>© {year} Evans Kumi. All rights reserved.</p>
             <div className="flex flex-wrap items-center gap-3">
+              {/* add mail here */}
+              <ExternalLink href={`mailto:kwakukumi14@gmail.com`}>Email</ExternalLink>
               <ExternalLink href={links.linkedin}>LinkedIn</ExternalLink>
               <ExternalLink href={links.github}>GitHub</ExternalLink>
               <ExternalLink href={links.hosted.myscholars}>
