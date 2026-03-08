@@ -505,7 +505,7 @@ const PhotoGame: React.FC = () => {
           </div>
           {score >= 10 && (
             <p className="animate-bounce text-xs font-medium text-teal-500">
-              Master Developer Status! 🚀
+              Goal Achiever Status! 🚀
             </p>
           )}
         </div>
