@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,6 +6,50 @@
   color-scheme: light dark;
 }
 
-.text-muted-foreground {
-  @apply text-gray-600 dark:text-gray-300;
+html {
+  scroll-behavior: smooth;
+}
+
+/* Smooth theme transitions */
+*, *::before, *::after {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Override transition for elements that need faster/custom transitions */
+.transition-all, .transition-transform, .transition-opacity, [class*="transition-"] {
+  transition: all var(--tw-transition-duration, 300ms) var(--tw-transition-timing-function, cubic-bezier(0.4, 0, 0.2, 1));
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+/* Selection color */
+::selection {
+  background: #bfdbfe;
+  color: #1e3a8a;
+}
+.dark ::selection {
+  background: #1e40af;
+  color: #dbeafe;
 }
