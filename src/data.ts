@@ -4,7 +4,7 @@ export const links = {
   email: "mailto:kwakukumi14@gmail.com",
   hosted: {
     myscholars: "https://myscholarshub.org/",
-    afya: "https://afya-ai-lab.vercel.app/",
+    afya: "https://afyaaitechnologies.com/",
     church: "https://ziontemple.vercel.app/",
     roboquest: "https://robo-quest-arena-kahoot.vercel.app/",
     panafrican_ai_chat_bot: "https://panafricanaisummit.com/",
