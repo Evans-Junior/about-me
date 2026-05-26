@@ -125,7 +125,7 @@ export default function Home() {
                   <br />software for Africa.
                 </h1>
                 <p className="mt-5 max-w-xl text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                  I design and ship practical systems that solve real problems — from AI-assisted COPD diagnostics (Breathwise) to scholarship platforms (MyScholarsHub) and merchant solutions (Emegroups).
+                  I design and ship practical systems that solve real problems — from AI-assisted COPD diagnostics (Breathwise) to scholarship platforms (MyScholarsHub) and merchant solutions (EmeGroups).
                 </p>
                 <div className="mt-7 flex flex-wrap gap-3">
                   <a
