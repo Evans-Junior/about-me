@@ -155,7 +155,7 @@ function Footer() {
               <span className="text-sm font-bold text-gray-900 dark:text-white">Evans Kumi</span>
             </div>
             <p className="text-xs text-gray-400 dark:text-gray-600">© {year} Evans Kumi. All rights reserved.</p>
-            <p className="text-xs text-gray-400 dark:text-gray-600 mt-0.5">McCall MacBain Scholar 2026 · AfyaAI Founder · EmeGroups Exec. Director</p>
+            <p className="text-xs text-gray-400 dark:text-gray-600 mt-0.5">McCall MacBain Scholar 2026 · AfyaAI Founder · EmeGroup Exec. Director</p>
           </div>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
             {[

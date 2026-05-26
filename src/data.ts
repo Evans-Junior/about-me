@@ -53,7 +53,7 @@ export const rolesAbout = [
   "Founder, Hopscof Inc. (non-profit upskilling youth in IT/ML)",
   "Co-founder & IT Manager, myScholarsHUB",
   "Founder & CEO, AfyaAI Technologies (AI health innovations in Ghana)",
-  "Executive Director & Senior Developer, EmeGroups (one-stop merchant solution provider)",
+  "Executive Director & Senior Developer, EmeGroup (one-stop merchant solution provider)",
 ];
 
 export const achievementsAbout = [
@@ -212,7 +212,7 @@ export const currentRoles = [
   },
   {
     status: "active" as const,
-    title: "EmeGroups",
+    title: "EmeGroup",
     role: "Executive Director & Senior Developer",
     period: "May 2026 – Present",
     gradient: "from-violet-600 to-purple-500",
@@ -255,6 +255,6 @@ export const NAV = [
   { label: "Research", path: "/research", icon: "🔬", desc: "Applied and academic research projects" },
   { label: "Publications", path: "/publications", icon: "📄", desc: "Peer-reviewed papers and journals" },
   { label: "Awards", path: "/awards", icon: "🏆", desc: "Scholarships, prizes and recognition" },
-  { label: "Currently", path: "/currently", icon: "⚡", desc: "AfyaAI Technologies & EmeGroups" },
+  { label: "Currently", path: "/currently", icon: "⚡", desc: "AfyaAI Technologies & EmeGroup" },
   { label: "Goal", path: "/goal", icon: "🎯", desc: "My vision for AI-powered healthcare in Africa" },
 ];

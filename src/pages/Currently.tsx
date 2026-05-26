@@ -14,7 +14,7 @@ export default function Currently() {
         <Reveal>
           <PageHeader
             title="Currently"
-            subtitle="Where I spend my time right now — building AI healthcare solutions full-time and leading EmeGroups as Executive Director."
+            subtitle="Where I spend my time right now — building AI healthcare solutions full-time and leading EmeGroup as Executive Director."
             accent="from-blue-600 to-cyan-500"
           />
         </Reveal>
