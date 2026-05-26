@@ -199,7 +199,7 @@ export const currentRoles = [
     status: "active" as const,
     title: "AfyaAI Technologies",
     role: "Founder & CEO — Full-Time",
-    period: "2024 – Present",
+    period: "2025 – Present",
     gradient: "from-blue-600 to-cyan-500",
     shadow: "shadow-blue-500/25",
     accentColor: "blue",
