@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/main.tsx"],"version":"5.9.3"}
+{"root":["./src/app.tsx","./src/layout.tsx","./src/data.ts","./src/main.tsx","./src/ui.tsx","./src/pages/about.tsx","./src/pages/ashesi.tsx","./src/pages/awards.tsx","./src/pages/currently.tsx","./src/pages/goal.tsx","./src/pages/home.tsx","./src/pages/leadership.tsx","./src/pages/publications.tsx","./src/pages/research.tsx","./src/pages/software.tsx"],"version":"5.9.3"}
