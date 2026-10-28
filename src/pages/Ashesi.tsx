@@ -23,7 +23,7 @@ export default function Ashesi() {
           <Card glow className="mb-5 overflow-hidden p-0">
             <div className="aspect-video w-full bg-black">
               <iframe
-                src="https://www.youtube.com/embed/EqBpRbIuIAo"
+                src="https://www.youtube.com/embed/_3mbrOfqnXc"
                 title="Notable Thesis Project feature: Evans Kumi's capstone at Ashesi University"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
@@ -38,7 +38,7 @@ export default function Ashesi() {
                   Produced by Ashesi University to celebrate my capstone project
                 </p>
               </div>
-              <ExternalLink href="https://www.youtube.com/watch?v=EqBpRbIuIAo">Watch on YouTube</ExternalLink>
+              <ExternalLink href="https://www.youtube.com/watch?v=_3mbrOfqnXc">Watch on YouTube</ExternalLink>
             </div>
           </Card>
         </Reveal>

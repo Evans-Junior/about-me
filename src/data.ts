@@ -38,7 +38,7 @@ export const awards: Award[] = [
   { title: "McCall MacBain Scholarship 2026: Scholar", org: "McCall MacBain Foundation at McGill University", date: "2026", featured: true, link: "https://mccallmacbainscholars.org/bio/evans-kumi/", linkLabel: "View my scholar profile" },
   { title: "Winner, Business Pitch Award", org: "2026 Pan African AI Summit", date: "2026", featured: true, link: "https://www.youtube.com/watch?v=X6rB4WrHS48", linkLabel: "Watch the pitch" },
   { title: "Named a Global Finalist for the McCall MacBain Scholarships", org: "Ashesi University news", date: "Feb 2026", link: "https://ashesi.edu.gh/evans-kumi-martha-chaitezvi-mccall-macbain-awards/", linkLabel: "Read the Ashesi feature" },
-  { title: "Notable Thesis Project 2025 Award", org: "Ashesi University", date: "Jun 2025", link: "https://www.youtube.com/watch?v=EqBpRbIuIAo", linkLabel: "Watch the thesis feature" },
+  { title: "Notable Thesis Project 2025 Award", org: "Ashesi University", date: "Jun 2025", link: "https://www.youtube.com/watch?v=_3mbrOfqnXc", linkLabel: "Watch the thesis feature" },
   { title: "Health Venture Incubator Program - Winner ($40,000)", org: "Ashesi University", date: "Sep 2024 - Apr 2025" },
   { title: "AfyaAI Technologies - Best Innovative Business ($1,000)", org: "1st Pan African AI Summit", date: "Sep 2025" },
   { title: "Mastercard Entrepreneurship Fund ($1,000)", org: "Mastercard Foundation", date: "2025" },
