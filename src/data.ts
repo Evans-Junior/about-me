@@ -105,7 +105,7 @@ export const softwareJourney = {
     {
       name: "HealthTech",
       items: [
-        { name: "AfyaHub (Diagnostic Suite)", desc: "AI-assisted breath-biomarker analysis for early COPD risk indication.", live: links.hosted.afya },
+        { name: "AfyaHub (Diagnostic Suite)", desc: "AI-assisted breath-biomarker analysis for early COPD risk indication. Formerly Breathwise.", live: links.hosted.afya },
         { name: "Report Apps with QR", desc: "Field data capture & verification for clinics/NGOs via QR.", repo: links.github },
         { name: "Custom RAG for COPD Results", desc: "Knowledge retrieval supporting diagnostic context.", repo: links.github },
       ],
