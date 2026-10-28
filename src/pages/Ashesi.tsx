@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { university, NAV } from "../data";
-import { Container, Reveal, Card, PageHeader, SectionCardHeader, BulletList } from "../ui";
+import { Container, Reveal, Card, PageHeader, SectionCardHeader, BulletList, ExternalLink } from "../ui";
 
 const idx = NAV.findIndex((n) => n.path === "/ashesi");
 const prev = NAV[idx - 1];
@@ -17,6 +17,30 @@ export default function Ashesi() {
             subtitle="Four years of academic excellence, leadership, community service, and technical innovation at Ashesi University, Ghana."
             accent="from-orange-500 to-amber-500"
           />
+        </Reveal>
+
+        <Reveal delay={60}>
+          <Card glow className="mb-5 overflow-hidden p-0">
+            <div className="aspect-video w-full bg-black">
+              <iframe
+                src="https://www.youtube.com/embed/EqBpRbIuIAo"
+                title="Notable Thesis Project feature: Evans Kumi's capstone at Ashesi University"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                loading="lazy"
+                className="h-full w-full border-0"
+              />
+            </div>
+            <div className="flex flex-wrap items-center justify-between gap-3 p-5">
+              <div>
+                <h3 className="text-base font-bold text-gray-900 dark:text-white">Notable Thesis Project 2025</h3>
+                <p className="mt-0.5 text-sm text-gray-500 dark:text-gray-400">
+                  Produced by Ashesi University to celebrate my capstone project
+                </p>
+              </div>
+              <ExternalLink href="https://www.youtube.com/watch?v=EqBpRbIuIAo">Watch on YouTube</ExternalLink>
+            </div>
+          </Card>
         </Reveal>
 
         <div className="grid gap-5 md:grid-cols-2">

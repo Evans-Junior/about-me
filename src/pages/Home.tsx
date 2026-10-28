@@ -66,8 +66,8 @@ function McCallBanner() {
           <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-yellow-400 to-amber-500 shadow-md shadow-yellow-300/40 text-2xl">🏆</div>
           <div className="flex-1 min-w-0">
             <span className="inline-block rounded-full bg-yellow-200 dark:bg-yellow-800/60 px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider text-yellow-800 dark:text-yellow-300 mb-1">New Achievement · 2026</span>
-            <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">McCall MacBain Scholarship 2026 — Scholar</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">McCall MacBain Foundation at McGill University — one of Canada's most prestigious graduate scholarships</p>
+            <h3 className="text-base sm:text-lg font-bold text-gray-900 dark:text-white">McCall MacBain Scholarship 2026 Scholar</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">McCall MacBain Foundation at McGill University, one of Canada's most prestigious graduate scholarships</p>
           </div>
         </div>
       </div>
@@ -87,7 +87,7 @@ const domains = [
   {
     icon: "🛠",
     title: "Software Engineering",
-    desc: "90+ projects spanning full-stack web, mobile (Flutter), backend APIs, SaaS platforms, and e-commerce.",
+    desc: "100+ projects spanning full-stack web, mobile (Flutter), backend APIs, SaaS platforms, and e-commerce.",
     gradient: "from-violet-600 to-purple-500",
     path: "/software",
   },
@@ -125,7 +125,7 @@ export default function Home() {
                   <br />software for Africa.
                 </h1>
                 <p className="mt-5 max-w-xl text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                  I design and ship practical systems that solve real problems — from AI-assisted COPD diagnostics (Breathwise) to scholarship platforms (MyScholarsHub) and merchant solutions (EmeGroup).
+                  I design and ship practical systems that solve real problems, from AI-assisted COPD diagnostics (Breathwise) to scholarship platforms (MyScholarsHub) and merchant solutions (EmeGroup).
                 </p>
                 <div className="mt-7 flex flex-wrap gap-3">
                   <a
@@ -140,7 +140,7 @@ export default function Home() {
                     to="/software"
                     className="rounded-xl border border-gray-200 dark:border-zinc-700 px-6 py-3 text-sm font-semibold text-gray-800 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-zinc-800 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200"
                   >
-                    Explore 90+ Projects
+                    Explore 100+ Projects
                   </Link>
                 </div>
                 <div className="mt-6 flex flex-wrap gap-2">

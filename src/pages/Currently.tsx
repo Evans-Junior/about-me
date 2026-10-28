@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { currentRoles, NAV } from "../data";
-import { Container, Reveal, Card, Badge, PageHeader, BulletList } from "../ui";
+import { Container, Reveal, Card, Badge, PageHeader, BulletList, ExternalLink } from "../ui";
 
 const idx = NAV.findIndex((n) => n.path === "/currently");
 const prev = NAV[idx - 1];
@@ -14,7 +14,7 @@ export default function Currently() {
         <Reveal>
           <PageHeader
             title="Currently"
-            subtitle="Where I spend my time right now — building AI healthcare solutions full-time and leading EmeGroup as Executive Director."
+            subtitle="Where I spend my time right now: graduate research at McGill's Shared Reality Lab and building AI healthcare solutions at AfyaAI Technologies."
             accent="from-blue-600 to-cyan-500"
           />
         </Reveal>
@@ -42,6 +42,11 @@ export default function Currently() {
                   <div className="mt-4">
                     <BulletList items={r.bullets} color="bg-blue-500" />
                   </div>
+                  {r.link && (
+                    <div className="mt-4">
+                      <ExternalLink href={r.link}>{r.linkLabel || "Learn more"}</ExternalLink>
+                    </div>
+                  )}
                 </Card>
               </Reveal>
             ))}
@@ -51,6 +56,7 @@ export default function Currently() {
         {/* Past */}
         <div>
           <p className="mb-4 text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-600">Past Experience</p>
+          <div className="grid gap-4">
           {currentRoles.filter((r) => r.status === "past").map((r, i) => (
             <Reveal key={r.title} delay={i * 60}>
               <Card className="opacity-80 hover:opacity-100">
@@ -65,7 +71,7 @@ export default function Currently() {
                         <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">{r.role}</p>
                         <p className="text-xs text-gray-400 dark:text-gray-600">{r.period}</p>
                       </div>
-                      <Badge tone="default">Ended Apr 2026</Badge>
+                      <Badge tone="default">{r.ended || "Past role"}</Badge>
                     </div>
                     <div className="mt-3">
                       <BulletList items={r.bullets} color="bg-gray-400" />
@@ -75,6 +81,7 @@ export default function Currently() {
               </Card>
             </Reveal>
           ))}
+          </div>
         </div>
 
         <Reveal delay={200}>

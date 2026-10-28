@@ -13,7 +13,7 @@ export default function Software() {
         <Reveal>
           <PageHeader
             title="Software Engineering Journey"
-            subtitle="90+ projects shipped across AI, SaaS, mobile, web, and HealthTech. Selected work grouped by domain."
+            subtitle="100+ projects shipped across AI, SaaS, mobile, web, and HealthTech. Selected work grouped by domain."
             accent="from-violet-600 to-purple-500"
           />
         </Reveal>

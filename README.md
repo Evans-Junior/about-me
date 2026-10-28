@@ -1,5 +1,5 @@
 
-# Evans Kumi — React + TypeScript + Tailwind Portfolio
+# Evans Kumi: React + TypeScript + Tailwind Portfolio
 
 A responsive, accessible, single‑page portfolio built with **Vite + React + TypeScript + Tailwind CSS**.
 

@@ -3,7 +3,7 @@ export const links = {
   github: "https://github.com/Evans-Junior?tab=repositories",
   email: "mailto:kwakukumi14@gmail.com",
   hosted: {
-    myscholars: "https://myscholarshub.org/",
+    myscholars: "https://my-scholars-hub.vercel.app/",
     afya: "https://afyaaitechnologies.com/",
     church: "https://ziontemple.vercel.app/",
     roboquest: "https://robo-quest-arena-kahoot.vercel.app/",
@@ -18,23 +18,34 @@ export const skills = {
 };
 
 export const stats = [
-  { label: "Projects Built", value: "90+", sub: "AI · SaaS · Mobile · Web" },
+  { label: "Projects Built", value: "100+", sub: "AI · SaaS · Mobile · Web" },
   { label: "Youth Mentored", value: "100+", sub: "Across Ghana & beyond" },
   { label: "Awards & Grants", value: "$44K+", sub: "Funding raised" },
   { label: "Publications", value: "1", sub: "Sage Digital Health" },
 ];
 
-export const awards = [
-  { title: "McCall MacBain Scholarship 2026 — Scholar", org: "McCall MacBain Foundation at McGill University", date: "2026", featured: true },
-  { title: "Notable Thesis Project 2025 Award", org: "Ashesi University", date: "Jun 2025" },
-  { title: "Health Venture Incubator Program – Winner ($40,000)", org: "Ashesi University", date: "Sep 2024 – Apr 2025" },
-  { title: "AfyaAI Technologies – Best Innovative Business ($1,000)", org: "1st Pan African AI Summit", date: "Sep 2025" },
+export type Award = {
+  title: string;
+  org: string;
+  date?: string;
+  featured?: boolean;
+  link?: string;
+  linkLabel?: string;
+};
+
+export const awards: Award[] = [
+  { title: "McCall MacBain Scholarship 2026: Scholar", org: "McCall MacBain Foundation at McGill University", date: "2026", featured: true, link: "https://mccallmacbainscholars.org/bio/evans-kumi/", linkLabel: "View my scholar profile" },
+  { title: "Winner, Business Pitch Award", org: "2026 Pan African AI Summit", date: "2026", featured: true, link: "https://www.youtube.com/watch?v=X6rB4WrHS48", linkLabel: "Watch the pitch" },
+  { title: "Recognized as an Ashesi alumnus earning global recognition", org: "Yen.com.gh feature", link: "https://www.facebook.com/yencomgh/photos/akoa-y%C9%9B-sharkashesi-university-alumnus-evans-kumi-has-earned-global-recognition-/941040848307291/", linkLabel: "Read the feature" },
+  { title: "Notable Thesis Project 2025 Award", org: "Ashesi University", date: "Jun 2025", link: "https://www.youtube.com/watch?v=EqBpRbIuIAo", linkLabel: "Watch the thesis feature" },
+  { title: "Health Venture Incubator Program - Winner ($40,000)", org: "Ashesi University", date: "Sep 2024 - Apr 2025" },
+  { title: "AfyaAI Technologies - Best Innovative Business ($1,000)", org: "1st Pan African AI Summit", date: "Sep 2025" },
   { title: "Mastercard Entrepreneurship Fund ($1,000)", org: "Mastercard Foundation", date: "2025" },
-  { title: "Dean's List", org: "Ashesi University", date: "Sep 2023 – Jun 2025" },
+  { title: "Dean's List", org: "Ashesi University", date: "Sep 2023 - Jun 2025" },
   { title: "Best Student Employee", org: "Ashesi University", date: "Dec 2024" },
-  { title: "Coca-Cola Funds – Winner ($2,000)", org: "Ashesi University", date: "Apr 2023" },
-  { title: "Second Place – Graphic User Design Competition", org: "Ashesi University", date: "Sep 2022" },
-  { title: "Third Place – Google Developer Club Hackathon", org: "Ashesi University", date: "Jun 2022" },
+  { title: "Coca-Cola Funds - Winner ($2,000)", org: "Ashesi University", date: "Apr 2023" },
+  { title: "Second Place - Graphic User Design Competition", org: "Ashesi University", date: "Sep 2022" },
+  { title: "Third Place - Google Developer Club Hackathon", org: "Ashesi University", date: "Jun 2022" },
   { title: "MasterCard Foundation Scholar Program", org: "Ashesi University", date: "Jan 2022" },
 ];
 
@@ -53,12 +64,13 @@ export const rolesAbout = [
   "Founder, Hopscof Inc. (non-profit upskilling youth in IT/ML)",
   "Co-founder & IT Manager, myScholarsHUB",
   "Founder & CEO, AfyaAI Technologies (AI health innovations in Ghana)",
-  "Executive Director & Senior Developer, EmeGroup (one-stop merchant solution provider)",
+  "Graduate researcher, Shared Reality Lab, McGill University (Electrical Engineering, Intelligent Systems)",
+  "Former Executive Director & Senior Developer, EmeGroup (one-stop merchant solution provider)",
 ];
 
 export const achievementsAbout = [
-  "Built 90+ projects across AI, SaaS, mobile, and web",
-  "Shipped hosted products with real users — MyScholarsHub, AfyaAI Technologies, Church Platform, RoboQuest",
+  "Built 100+ projects across AI, SaaS, mobile, and web",
+  "Shipped hosted products with real users: MyScholarsHub, AfyaAI Technologies, Church Platform, RoboQuest",
   "Mentored 100+ youth in web, mobile, and ML (Hopscof)",
 ];
 
@@ -83,7 +95,7 @@ export const softwareJourney = {
       name: "AI/ML & Data",
       items: [
         { name: "Custom RAG for COPD Validation", desc: "Retrieval pipeline supporting COPD result validation.", repo: links.github },
-        { name: "LangChain Marketing AI", desc: "AI-driven conversational marketing — personalises recommendations and guides patients to best purchasing decisions.", repo: links.github },
+        { name: "LangChain Marketing AI", desc: "AI-driven conversational marketing that personalises recommendations and guides patients to best purchasing decisions.", repo: links.github },
         { name: "Sentiment App", desc: "Text sentiment analysis UI for quick insights.", repo: links.github },
         { name: "Weather Prediction App", desc: "Time-series/ML-based forecast demo.", repo: links.github },
       ],
@@ -105,9 +117,9 @@ export const softwareJourney = {
     {
       name: "SaaS / Business Systems",
       items: [
-        { name: "Nosmay E-Commerce Platform", desc: "Full e-commerce platform — product catalog, cart, orders, and payments with LangChain AI marketing.", repo: links.github },
+        { name: "Nosmay E-Commerce Platform", desc: "Full e-commerce platform with product catalog, cart, orders, and payments with LangChain AI marketing.", repo: links.github },
         { name: "Insurance SaaS", desc: "Policy management, claims processing, role-based access, and analytics.", repo: links.github },
-        { name: "Payroll System", desc: "SME-focused payroll — pay runs, tax, compliance, and reporting.", repo: links.github },
+        { name: "Payroll System", desc: "SME-focused payroll: pay runs, tax, compliance, and reporting.", repo: links.github },
         { name: "Chore Management System", desc: "Shared responsibility tracking for homes/teams.", repo: links.github },
         { name: "Hostel Management Application", desc: "Rooming, requests, and billing workflows.", repo: links.github },
         { name: "Report Applications (QR)", desc: "Secure field data capture & verification via QR.", repo: links.github },
@@ -132,13 +144,13 @@ export const softwareJourney = {
 
 export const leadership = {
   roles: [
-    "Resident Assistant (Aug 2022 – Jun 2025)",
-    "Artificial Intelligence Club Lead, Ashesi (Dec 2023 – Dec 2024)",
-    "Google DSC – Mobile Track Co-Lead (Sep 2022 – Dec 2023)",
-    "Founder, Hopscof Inc. (Dec 2022 – Present)",
-    "Co-founder & IT Manager, myScholarsHUB (May 2023 – Present)",
-    "Social Media Manager & Career Peer Advisor (Sep 2022 – Jun 2025)",
-    "Graphic Design Specialist (Aug 2022 – Jun 2025)",
+    "Resident Assistant (Aug 2022 - Jun 2025)",
+    "Artificial Intelligence Club Lead, Ashesi (Dec 2023 - Dec 2024)",
+    "Google DSC - Mobile Track Co-Lead (Sep 2022 - Dec 2023)",
+    "Founder, Hopscof Inc. (Dec 2022 - Present)",
+    "Co-founder & IT Manager, myScholarsHUB (May 2023 - Present)",
+    "Social Media Manager & Career Peer Advisor (Sep 2022 - Jun 2025)",
+    "Graphic Design Specialist (Aug 2022 - Jun 2025)",
   ],
   achievements: [
     "Mentored 100+ learners across Ghana and beyond",
@@ -149,15 +161,15 @@ export const leadership = {
 
 export const university = {
   roles: [
-    "Health Aider, Natembea Health Center (Jan 2024 – May 2025)",
-    "Career Peer Advisor (Sep 2023 – Apr 2025)",
-    "Senior Resident Assistant (Aug 2023 – May 2025)",
-    "Founder & Lead, Ashesi AI Club (Dec 2023 – Dec 2024)",
-    "Co-Lead Table Tennis Club (Jan 2024 – Dec 2024)",
-    "Co-Lead Mobile Track, Google DSC Ashesi (Jan – Dec 2023)",
-    "Career Development & Entrepreneurship Assistant (Jul 2022 – Apr 2023)",
-    "AIX Senior Robotics Coach (Jun – Aug 2025)",
-    "AIX Robotics Coach (Jun – Jul 2023)",
+    "Health Aider, Natembea Health Center (Jan 2024 - May 2025)",
+    "Career Peer Advisor (Sep 2023 - Apr 2025)",
+    "Senior Resident Assistant (Aug 2023 - May 2025)",
+    "Founder & Lead, Ashesi AI Club (Dec 2023 - Dec 2024)",
+    "Co-Lead Table Tennis Club (Jan 2024 - Dec 2024)",
+    "Co-Lead Mobile Track, Google DSC Ashesi (Jan - Dec 2023)",
+    "Career Development & Entrepreneurship Assistant (Jul 2022 - Apr 2023)",
+    "AIX Senior Robotics Coach (Jun - Aug 2025)",
+    "AIX Robotics Coach (Jun - Jul 2023)",
   ],
   achievements: [
     "Balanced intensive leadership roles with academics and shipped real products",
@@ -194,27 +206,58 @@ export const research = [
   },
 ];
 
-export const currentRoles = [
+export type CurrentRole = {
+  status: "active" | "past";
+  title: string;
+  role: string;
+  period: string;
+  gradient: string;
+  shadow: string;
+  accentColor: string;
+  bullets: string[];
+  ended?: string;
+  link?: string;
+  linkLabel?: string;
+};
+
+export const currentRoles: CurrentRole[] = [
   {
-    status: "active" as const,
+    status: "active",
+    title: "Shared Reality Lab, McGill University",
+    role: "Graduate Researcher, Electrical Engineering",
+    period: "2026 - Present",
+    gradient: "from-rose-600 to-red-500",
+    shadow: "shadow-rose-500/25",
+    accentColor: "rose",
+    link: "https://srl.mcgill.ca/personnel/",
+    linkLabel: "Lab personnel page",
+    bullets: [
+      "Studying Electrical Engineering at McGill University, focusing on Intelligent Systems",
+      "Research member of the Shared Reality Lab",
+      "Working at the intersection of intelligent systems, sensing, and human-centred technology",
+    ],
+  },
+  {
+    status: "active",
     title: "AfyaAI Technologies",
-    role: "Founder & CEO — Full-Time",
-    period: "2025 – Present",
+    role: "Founder & CEO, Full-Time",
+    period: "2025 - Present",
     gradient: "from-blue-600 to-cyan-500",
     shadow: "shadow-blue-500/25",
     accentColor: "blue",
     bullets: [
       "Full-time focus on building AI-powered healthcare solutions in Ghana and across Africa",
       "Leading product development, research partnerships, and team growth",
-      "Scaling Breathwise — AI-assisted COPD early-detection diagnostic suite",
+      "Scaling Breathwise, the AI-assisted COPD early-detection diagnostic suite",
       "Driving AfyaAI's mission: equitable healthcare technology in low-resource settings",
     ],
   },
   {
-    status: "active" as const,
+    status: "past",
     title: "EmeGroup",
     role: "Executive Director & Senior Developer",
-    period: "May 2026 – Present",
+    period: "May 2026 - Oct 2026",
+    ended: "Ended Oct 2026",
     gradient: "from-violet-600 to-purple-500",
     shadow: "shadow-violet-500/25",
     accentColor: "violet",
@@ -222,24 +265,25 @@ export const currentRoles = [
       "Executive Director and lead engineer at a one-stop merchant solution provider",
       "Overseeing product development, product design, and software architecture",
       "Hands-on development alongside a team of 3 developers",
-      "End-to-end product strategy — from ideation and design to building and deployment",
+      "End-to-end product strategy, from ideation and design to building and deployment",
     ],
   },
   {
-    status: "past" as const,
+    status: "past",
     title: "Nosmay Company Limited",
     role: "Backend Software Engineer (Remote)",
-    period: "Jan 2025 – Apr 2026",
+    period: "Jan 2025 - Apr 2026",
+    ended: "Ended Apr 2026",
     gradient: "from-gray-500 to-gray-400",
     shadow: "shadow-gray-400/20",
     accentColor: "gray",
     bullets: [
-      "Built full e-commerce platform — product catalog, cart, orders, and payments",
+      "Built full e-commerce platform with product catalog, cart, orders, and payments",
       "Integrated LangChain AI marketing assistant to personalise patient product recommendations",
-      "Built Insurance SaaS — policy management, claims processing, analytics",
-      "Built Payroll System for SMEs — pay runs, tax compliance, reporting",
+      "Built Insurance SaaS with policy management, claims processing, analytics",
+      "Built Payroll System for SMEs with pay runs, tax compliance, reporting",
       "Database architecture design, testing/debugging, feature integration, docs, cloud deployment",
-      "Earlier (Apr – Dec 2024): Business Development Unit — recruiting, market analysis, onboarding",
+      "Earlier (Apr - Dec 2024): Business Development Unit covering recruiting, market analysis, onboarding",
     ],
   },
 ];
@@ -249,12 +293,12 @@ export const personalGoal =
 
 export const NAV = [
   { label: "About", path: "/about", icon: "👤", desc: "Who I am, my roles and key achievements" },
-  { label: "Software", path: "/software", icon: "💻", desc: "90+ projects across AI, SaaS, mobile & web" },
+  { label: "Software", path: "/software", icon: "💻", desc: "100+ projects across AI, SaaS, mobile & web" },
   { label: "Leadership", path: "/leadership", icon: "🏛", desc: "Leading teams, clubs and communities" },
   { label: "Ashesi", path: "/ashesi", icon: "🎓", desc: "My university journey at Ashesi" },
   { label: "Research", path: "/research", icon: "🔬", desc: "Applied and academic research projects" },
   { label: "Publications", path: "/publications", icon: "📄", desc: "Peer-reviewed papers and journals" },
   { label: "Awards", path: "/awards", icon: "🏆", desc: "Scholarships, prizes and recognition" },
-  { label: "Currently", path: "/currently", icon: "⚡", desc: "AfyaAI Technologies & EmeGroup" },
+  { label: "Currently", path: "/currently", icon: "⚡", desc: "Shared Reality Lab at McGill & AfyaAI Technologies" },
   { label: "Goal", path: "/goal", icon: "🎯", desc: "My vision for AI-powered healthcare in Africa" },
 ];

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { awards, NAV } from "../data";
-import { Container, Reveal, Card, Badge, PageHeader } from "../ui";
+import { Container, Reveal, Card, Badge, PageHeader, ExternalLink } from "../ui";
 
 const idx = NAV.findIndex((n) => n.path === "/awards");
 const prev = NAV[idx - 1];
@@ -22,7 +22,7 @@ export default function Awards() {
         <div className="grid gap-3">
           {awards.map((a, idx_) => (
             <Reveal key={idx_} delay={idx_ * 40}>
-              {"featured" in a && a.featured ? (
+              {a.featured ? (
                 <div className="relative overflow-hidden rounded-2xl border border-yellow-300/70 dark:border-yellow-600/40 bg-gradient-to-r from-yellow-50 to-amber-50 dark:from-yellow-950/30 dark:to-amber-950/20 p-5 shadow-md shadow-yellow-100/60 dark:shadow-yellow-900/10 hover:-translate-y-0.5 transition-all duration-300">
                   <div className="absolute right-5 top-1/2 -translate-y-1/2 text-5xl opacity-10 select-none pointer-events-none">🏆</div>
                   <div className="relative flex flex-wrap items-center justify-between gap-3">
@@ -33,8 +33,13 @@ export default function Awards() {
                         <p className="text-xs text-yellow-700 dark:text-yellow-400 mt-0.5">{a.org}</p>
                       </div>
                     </div>
-                    <Badge tone="gold">{a.date}</Badge>
+                    {a.date && <Badge tone="gold">{a.date}</Badge>}
                   </div>
+                  {a.link && (
+                    <div className="relative mt-3">
+                      <ExternalLink href={a.link}>{a.linkLabel || "View proof"}</ExternalLink>
+                    </div>
+                  )}
                 </div>
               ) : (
                 <Card>
@@ -42,9 +47,14 @@ export default function Awards() {
                     <p className="text-sm font-medium text-gray-800 dark:text-gray-200 flex-1">{a.title}</p>
                     <div className="flex flex-wrap items-center gap-2">
                       <Badge tone="default">{a.org}</Badge>
-                      <Badge tone="warning">{a.date}</Badge>
+                      {a.date && <Badge tone="warning">{a.date}</Badge>}
                     </div>
                   </div>
+                  {a.link && (
+                    <div className="mt-3">
+                      <ExternalLink href={a.link}>{a.linkLabel || "View proof"}</ExternalLink>
+                    </div>
+                  )}
                 </Card>
               )}
             </Reveal>
