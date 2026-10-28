@@ -8,6 +8,7 @@ export const links = {
     church: "https://ziontemple.vercel.app/",
     roboquest: "https://robo-quest-arena-kahoot.vercel.app/",
     panafrican_ai_chat_bot: "https://panafricanaisummit.com/",
+    asbed: "https://wikoconsulting.com/asbed/",
   },
 };
 
@@ -89,6 +90,7 @@ export const softwareJourney = {
         { name: "Church Platform", desc: "Digital platform for church content & engagement.", live: links.hosted.church },
         { name: "RoboQuest Arena", desc: "Kahoot-style game system connected to robots.", live: links.hosted.roboquest },
         { name: "PAAIS Junior AI Chat Bot", desc: "AI chat assistant for the Pan African AI Summit.", live: links.hosted.panafrican_ai_chat_bot },
+        { name: "ASBED Hostel Management System", desc: "Hostel management platform handling rooming, bookings, requests, and billing workflows.", live: links.hosted.asbed },
       ],
     },
     {
@@ -121,7 +123,7 @@ export const softwareJourney = {
         { name: "Insurance SaaS", desc: "Policy management, claims processing, role-based access, and analytics.", repo: links.github },
         { name: "Payroll System", desc: "SME-focused payroll: pay runs, tax, compliance, and reporting.", repo: links.github },
         { name: "Chore Management System", desc: "Shared responsibility tracking for homes/teams.", repo: links.github },
-        { name: "Hostel Management Application", desc: "Rooming, requests, and billing workflows.", repo: links.github },
+        { name: "Hostel Management Application (ASBED)", desc: "Rooming, requests, and billing workflows.", live: links.hosted.asbed },
         { name: "Report Applications (QR)", desc: "Secure field data capture & verification via QR.", repo: links.github },
       ],
     },
