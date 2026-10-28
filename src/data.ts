@@ -105,7 +105,7 @@ export const softwareJourney = {
     {
       name: "HealthTech",
       items: [
-        { name: "Breathwise (Diagnostic Suite)", desc: "AI-assisted breath-biomarker analysis for early COPD risk indication.", live: links.hosted.afya },
+        { name: "AfyaHub (Diagnostic Suite)", desc: "AI-assisted breath-biomarker analysis for early COPD risk indication.", live: links.hosted.afya },
         { name: "Report Apps with QR", desc: "Field data capture & verification for clinics/NGOs via QR.", repo: links.github },
         { name: "Custom RAG for COPD Results", desc: "Knowledge retrieval supporting diagnostic context.", repo: links.github },
       ],
@@ -192,7 +192,7 @@ export const research = [
     org: "Applied Methods and Research Experience, United States",
   },
   {
-    title: "Breathwise: COPD Early-Risk Indication via Breath Biomarkers",
+    title: "AfyaHub: COPD Early-Risk Indication via Breath Biomarkers",
     body: "AI-assisted pipeline using breath VOCs + classification to support early COPD detection in low-resource settings (mobile-integrated).",
     org: "Ashesi University, Ghana",
   },
@@ -250,7 +250,7 @@ export const currentRoles: CurrentRole[] = [
     bullets: [
       "Full-time focus on building AI-powered healthcare solutions in Ghana and across Africa",
       "Leading product development, research partnerships, and team growth",
-      "Scaling Breathwise, the AI-assisted COPD early-detection diagnostic suite",
+      "Scaling AfyaHub, the AI-assisted COPD early-detection diagnostic suite",
       "Driving AfyaAI's mission: equitable healthcare technology in low-resource settings",
     ],
   },
